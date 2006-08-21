@@ -1,0 +1,13 @@
+--- dbus-qt3-0.70/configure.in.orig	2006-07-18 14:37:08.000000000 +0200
++++ dbus-qt3-0.70/configure.in	2006-08-22 00:39:31.756046000 +0200
+@@ -118,8 +118,8 @@
+ AC_C_BIGENDIAN
+ 
+ #### Various functions
+-AC_CHECK_LIB(socket,socket)
+-AC_CHECK_LIB(nsl,gethostbyname)
++AC_SEARCH_LIBS(socket,socket)
++AC_SEARCH_LIBS(gethostbyname,nsl)
+ 
+ AC_CHECK_FUNCS(vsnprintf vasprintf nanosleep usleep poll setenv unsetenv socketpair getgrouplist)
+ 
