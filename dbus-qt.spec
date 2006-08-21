@@ -25,8 +25,8 @@ from DBUS 0.70.
 
 %description -l pl
 Dodatkowa biblioteka D-BUS do integracji standardowej biblioteki D-BUS
-z abstrakcj± w±tków i g³ówn± p T stara implementacja z Qt3 API dla
-DBUS 0.70.
+z abstrakcj± w±tków i g³ówn± pêtl± Qt. Jest to stara implementacja z
+API Qt3 dla DBUS 0.70.
 
 %package devel
 Summary:	Header files for Qt-based library for using D-BUS
