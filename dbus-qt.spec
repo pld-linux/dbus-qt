@@ -11,10 +11,12 @@ License:	GPL v2+
 Group:		Libraries
 Source0:	%{rname}-%{version}.tar.bz2
 # Source0-md5:	9a8d4a4d560b49fb5ad034abfd3e3db5
+Patch0:		%{name}-nolibs.patch
 URL:		http://www.freedesktop.org/Software/dbus
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
 BuildRequires:	dbus-devel >= 0.91
+BuildRequires:	libtool >= 2:1.5
 BuildRequires:	qt-devel >= 6:3.1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -55,8 +57,14 @@ Statyczna biblioteka do u¿ywania D-BUS oparta o Qt.
 
 %prep
 %setup -qn %{rname}-%{version}
+%patch0 -p1
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure \
 	--enable-qt3
 %{__make}
