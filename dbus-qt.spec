@@ -2,7 +2,7 @@
 %define		rname		dbus-qt3
 #
 Summary:	Qt-based library for using D-BUS
-Summary(pl):	Biblioteka do uøywania D-BUS oparta o Qt
+Summary(pl.UTF-8):   Biblioteka do u≈ºywania D-BUS oparta o Qt
 Name:		dbus-qt
 Version:	0.70
 Release:	1
@@ -25,14 +25,14 @@ D-BUS add-on library to integrate the standard D-BUS library with the
 Qt thread abstraction and main loop. This is backport of old Qt3 API
 from DBUS 0.70.
 
-%description -l pl
+%description -l pl.UTF-8
 Dodatkowa biblioteka D-BUS do integracji standardowej biblioteki D-BUS
-z abstrakcj± w±tkÛw i g≥Ûwn± pÍtl± Qt. Jest to stara implementacja z
+z abstrakcjƒÖ wƒÖtk√≥w i g≈Ç√≥wnƒÖ pƒôtlƒÖ Qt. Jest to stara implementacja z
 API Qt3 dla DBUS 0.70.
 
 %package devel
 Summary:	Header files for Qt-based library for using D-BUS
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki do uøywania D-BUS opartej o Qt
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki do u≈ºywania D-BUS opartej o Qt
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	dbus-devel >= 0.91
@@ -40,20 +40,20 @@ Requires:	dbus-devel >= 0.91
 %description devel
 Header files for Qt-based library for using D-BUS.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki do uøywania D-BUS opartej o Qt.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki do u≈ºywania D-BUS opartej o Qt.
 
 %package static
 Summary:	Static Qt-based library for using D-BUS
-Summary(pl):	Statyczna biblioteka do uøywania D-BUS oparta o Qt
+Summary(pl.UTF-8):   Statyczna biblioteka do u≈ºywania D-BUS oparta o Qt
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Qt-based library for using D-BUS.
 
-%description static -l pl
-Statyczna biblioteka do uøywania D-BUS oparta o Qt.
+%description static -l pl.UTF-8
+Statyczna biblioteka do u≈ºywania D-BUS oparta o Qt.
 
 %prep
 %setup -qn %{rname}-%{version}
