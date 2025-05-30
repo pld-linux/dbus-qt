@@ -34,6 +34,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki do używania D-BUS opartej o Qt
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	dbus-devel >= 0.91
+Requires:	qt-devel >= 6:3.1.0
 
 %description devel
 Header files for Qt-based library for using D-BUS.
@@ -82,14 +83,18 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/libdbus*.so.*.*
+%attr(755,root,root) %{_libdir}/libdbus-qt-1.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libdbus-qt-1.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libdbus*.so
-%{_libdir}/libdbus*.la
-%{_includedir}/dbus-1.0/dbus/*
+%attr(755,root,root) %{_libdir}/libdbus-qt-1.so
+%{_libdir}/libdbus-qt-1.la
+%{_includedir}/dbus-1.0/dbus/connection.h
+%{_includedir}/dbus-1.0/dbus/dbus-qt.h
+%{_includedir}/dbus-1.0/dbus/message.h
+%{_includedir}/dbus-1.0/dbus/server.h
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libdbus*.a
+%{_libdir}/libdbus-qt-1.a
