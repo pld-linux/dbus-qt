@@ -3,7 +3,7 @@ Summary:	Qt-based library for using D-BUS
 Summary(pl.UTF-8):	Biblioteka do używania D-BUS oparta o Qt
 Name:		dbus-qt
 Version:	0.70
-Release:	2
+Release:	3
 # AFL v2.1 or GPL v2+, but Qt license enforces GPL
 License:	GPL v2+
 Group:		Libraries
