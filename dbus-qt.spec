@@ -1,6 +1,4 @@
-#
 %define		rname		dbus-qt3
-#
 Summary:	Qt-based library for using D-BUS
 Summary(pl.UTF-8):	Biblioteka do używania D-BUS oparta o Qt
 Name:		dbus-qt
@@ -12,7 +10,7 @@ Group:		Libraries
 Source0:	%{rname}-%{version}.tar.bz2
 # Source0-md5:	9a8d4a4d560b49fb5ad034abfd3e3db5
 Patch0:		%{name}-nolibs.patch
-URL:		http://www.freedesktop.org/Software/DBusBindings
+URL:		https://www.freedesktop.org/Software/DBusBindings
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
 BuildRequires:	dbus-devel >= 0.91
@@ -57,7 +55,7 @@ Statyczna biblioteka do używania D-BUS oparta o Qt.
 
 %prep
 %setup -qn %{rname}-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__libtoolize}
