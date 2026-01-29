@@ -3,7 +3,7 @@ Summary:	Qt-based library for using D-BUS
 Summary(pl.UTF-8):	Biblioteka do używania D-BUS oparta o Qt
 Name:		dbus-qt
 Version:	0.70
-Release:	3
+Release:	4
 # AFL v2.1 or GPL v2+, but Qt license enforces GPL
 License:	GPL v2+
 Group:		Libraries
@@ -83,12 +83,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/libdbus-qt-1.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libdbus-qt-1.so.1
+%{_libdir}/libdbus-qt-1.so.*.*.*
+%ghost %{_libdir}/libdbus-qt-1.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libdbus-qt-1.so
+%{_libdir}/libdbus-qt-1.so
 %{_libdir}/libdbus-qt-1.la
 %{_includedir}/dbus-1.0/dbus/connection.h
 %{_includedir}/dbus-1.0/dbus/dbus-qt.h
